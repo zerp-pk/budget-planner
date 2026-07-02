@@ -18,7 +18,7 @@ class MarketplaceSettingSeeder extends Seeder
             $files = File::files($marketplaceDir);
             foreach ($files as $file) {
                 if (in_array($file->getExtension(), ['png', 'jpg', 'jpeg', 'gif', 'webp'])) {
-                    $screenshots[] = '/packages/workdo/BudgetPlanner/src/marketplace/' . $file->getFilename();
+                    $screenshots[] = '/packages/local/BudgetPlanner/src/marketplace/' . $file->getFilename();
                 }
             }
         }
@@ -33,7 +33,7 @@ class MarketplaceSettingSeeder extends Seeder
                 'sections' => [
                     'hero' => [
                         'variant' => 'hero1',
-                        'title' => 'BudgetPlanner Module for ERPGo SaaS',
+                        'title' => 'BudgetPlanner Module for Zerp',
                         'subtitle' => 'Streamline your budgetplanner workflow with comprehensive tools and automated management.',
                         'primary_button_text' => 'Install BudgetPlanner Module',
                         'primary_button_link' => '#install',
@@ -55,19 +55,19 @@ class MarketplaceSettingSeeder extends Seeder
                                 'title' => 'Feature 1',
                                 'description' => 'Description of first key feature for budgetplanner management.',
                                 'keyPoints' => ['Point 1', 'Point 2', 'Point 3', 'Point 4'],
-                                'screenshot' => '/packages/workdo/BudgetPlanner/src/marketplace/image1.png'
+                                'screenshot' => '/packages/local/BudgetPlanner/src/marketplace/image1.png'
                             ],
                             [
                                 'title' => 'Feature 2',
                                 'description' => 'Description of second key feature for budgetplanner organization.',
                                 'keyPoints' => ['Point 1', 'Point 2', 'Point 3', 'Point 4'],
-                                'screenshot' => '/packages/workdo/BudgetPlanner/src/marketplace/image2.png'
+                                'screenshot' => '/packages/local/BudgetPlanner/src/marketplace/image2.png'
                             ],
                             [
                                 'title' => 'Feature 3',
                                 'description' => 'Description of third key feature for budgetplanner tracking.',
                                 'keyPoints' => ['Point 1', 'Point 2', 'Point 3', 'Point 4'],
-                                'screenshot' => '/packages/workdo/BudgetPlanner/src/marketplace/image3.png'
+                                'screenshot' => '/packages/local/BudgetPlanner/src/marketplace/image3.png'
                             ]
                         ]
                     ],

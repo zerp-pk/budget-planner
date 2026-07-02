@@ -1,6 +1,6 @@
 {
     "name": "zerp/budget-planner",
-    "description": "Description for budget-planner package",
+    "description": "Budget planning module for the Zerp ERP platform",
     "type": "library",
     "license": "MIT",
     "require": {},
