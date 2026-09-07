@@ -38,7 +38,7 @@ class BudgetController extends Controller
                 ->when(request('budget_type') && request('budget_type') !== '', fn($q) => $q->where('budget_type', request('budget_type')))
                 ->when(request('status') && request('status') !== '', fn($q) => $q->where('status', request('status')))
                 ->when(request('period_id') && request('period_id') !== '', fn($q) => $q->where('period_id', request('period_id')))
-                ->when(request('sort'), fn($q) => $q->orderBy(request('sort'), request('direction', 'asc')), fn($q) => $q->latest())
+                ->when(request('sort'), fn($q) => $q->sortSafe(request('sort'), request('direction'), 'created_at', 'desc'), fn($q) => $q->latest())
                 ->paginate(request('per_page', 10))
                 ->withQueryString();
 
